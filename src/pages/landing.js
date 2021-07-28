@@ -49,7 +49,7 @@ export default function LandingPage() {
             height: "100%",
             display: "flex",
             flexDirection: "column",
-            paddingTop: "35%",
+            paddingTop: "15%",
           }}
         >
           <Row>
@@ -184,7 +184,10 @@ export default function LandingPage() {
                         href="https://j12designs.com"
                         target="__blank"
                         rel="noopener"
-                        style={{ textDecoration: "none", color: "#171717" }}
+                        style={{
+                          textDecoration: "none",
+                          color: "#171717",
+                        }}
                       >
                         J12 Designs{" "}
                       </a>
