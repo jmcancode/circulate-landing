@@ -137,16 +137,6 @@ export default function LandingPage() {
             </Col>
           </Row>
         </motion.div>
-        <motion.div className="container pt-5">
-          <Row xs={1} md={1} lg={1}>
-            <Col className="text-center text-uppercase text-white">
-              <h4>We're Mobile!</h4>
-            </Col>
-          </Row>
-          <Row>
-            <Col></Col>
-          </Row>
-        </motion.div>
       </motion.div>
     </React.Fragment>
   );
