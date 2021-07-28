@@ -171,6 +171,24 @@ export default function LandingPage() {
                     >
                       All Right Reserved Circulate, LLC ©
                     </small>
+                    <small
+                      className="pt-5 text-muted text-center pt-5 text-uppercase"
+                      style={{
+                        fontSize: "9px",
+                        fontFamily: "Roboto",
+                        fontWeight: "300",
+                      }}
+                    >
+                      Design and Development by{" "}
+                      <a
+                        href="https://j12designs.com"
+                        target="__blank"
+                        rel="noopener"
+                        style={{ textDecoration: "none", color: "#171717" }}
+                      >
+                        J12 Designs{" "}
+                      </a>
+                    </small>
                   </Row>
                 </Offcanvas.Body>
               </Offcanvas>
