@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Row, Col, Image, Form, Offcanvas, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
-import { AiFillApple, AiFillAndroid, AiOutlineMail } from "react-icons/ai";
-import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { db } from "../firebase/config";
 
 export default function LandingPage() {
@@ -66,16 +64,33 @@ export default function LandingPage() {
           </Row>
           <Row xs={1} md={1} lg={1}>
             <Col className="text-center text-white pt-4">
-              <small className="text-uppercase">Our website is </small>
-              <h1 className="text-uppercase">under construction</h1>
-              <small style={{ fontSize: "12px" }}>
+              <small
+                style={{ fontFamily: "Roboto" }}
+                className="text-uppercase"
+              >
+                Our website is{" "}
+              </small>
+              <h1 style={{ fontFamily: "Roboto" }} className="text-uppercase">
+                under construction
+              </h1>
+              <small
+                style={{
+                  fontSize: "12px",
+                  fontFamily: "sans-serif",
+                  textTransform: "uppercase",
+                }}
+              >
                 Join our mailing list for the official launch.
               </small>
             </Col>
           </Row>
           <Row>
             <Col className="text-center pt-3">
-              <Button variant="outline-light" onClick={handleContactShow}>
+              <Button
+                variant="outline-light"
+                onClick={handleContactShow}
+                style={{ fontFamily: "Roboto", fontWeight: "500" }}
+              >
                 NOTIFY ME
               </Button>
               <Offcanvas
@@ -84,7 +99,11 @@ export default function LandingPage() {
                 onHide={handleContactClose}
               >
                 <Offcanvas.Header closeButton>
-                  <Offcanvas.Title>Circulate | San Antonio</Offcanvas.Title>
+                  <Offcanvas.Title
+                    style={{ fontFamily: "Roboto", fontWeight: "500" }}
+                  >
+                    Circulate | San Antonio
+                  </Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Row xs={1} md={1} lg={1}>
@@ -95,7 +114,10 @@ export default function LandingPage() {
                       </p>
                     </Col>
                     <Col>
-                      <Form onSubmit={handleSubmit}>
+                      <Form
+                        style={{ fontFamily: "Roboto", fontWeight: "500" }}
+                        onSubmit={handleSubmit}
+                      >
                         <Form.Group className="pb-2">
                           <Form.Control
                             type="text"
@@ -113,7 +135,12 @@ export default function LandingPage() {
                             onChange={(e) => setEmail(e.target.value)}
                           />
                           <Form.Text className="text-muted">
-                            <small style={{ fontSize: "10px" }}>
+                            <small
+                              style={{
+                                fontSize: "10px",
+                                fontFamily: "sans-serif",
+                              }}
+                            >
                               We promise not to spam, share, or sell your
                               contact information.
                             </small>
@@ -128,7 +155,10 @@ export default function LandingPage() {
                     </Col>
                   </Row>
                   <Row>
-                    <small className="text-muted text-center pt-5 text-uppercase">
+                    <small
+                      className="text-muted text-center pt-5 text-uppercase"
+                      style={{ fontFamily: "Roboto", fontWeight: "bold" }}
+                    >
                       All Right Reserved Circulate, LLC ©
                     </small>
                   </Row>
