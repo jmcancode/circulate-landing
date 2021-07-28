@@ -3,7 +3,7 @@ import { Row, Col, Image, Form, Offcanvas, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
 import { db } from "../firebase/config";
-
+import "../index.css";
 export default function LandingPage() {
   const [showContact, setShowContact] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -34,13 +34,23 @@ export default function LandingPage() {
   return (
     <React.Fragment>
       <motion.div
-        style={{ height: "100%", width: "100%", backgroundColor: "#275044" }}
+        style={{
+          height: "100vh",
+          width: "100%",
+          backgroundColor: "#2C2C2C",
+        }}
+        className="p-3"
       >
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          className="pt-5 container"
-          style={{ marginTop: "105px" }}
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            paddingTop: "35%",
+          }}
         >
           <Row>
             <Col
