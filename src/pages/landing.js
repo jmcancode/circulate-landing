@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Row, Col, Image, Form, Offcanvas, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
-
+import { AiFillApple, AiFillAndroid, AiOutlineMail } from "react-icons/ai";
+import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { db } from "../firebase/config";
 
 export default function LandingPage() {
@@ -83,7 +84,7 @@ export default function LandingPage() {
                 onHide={handleContactClose}
               >
                 <Offcanvas.Header closeButton>
-                  <Offcanvas.Title>Circulate | San Antonio, Tx</Offcanvas.Title>
+                  <Offcanvas.Title>Circulate | San Antonio</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Row xs={1} md={1} lg={1}>
@@ -126,9 +127,24 @@ export default function LandingPage() {
                       </Form>
                     </Col>
                   </Row>
+                  <Row>
+                    <small className="text-muted text-center pt-5 text-uppercase">
+                      All Right Reserved Circulate, LLC ©
+                    </small>
+                  </Row>
                 </Offcanvas.Body>
               </Offcanvas>
             </Col>
+          </Row>
+        </motion.div>
+        <motion.div className="container pt-5">
+          <Row xs={1} md={1} lg={1}>
+            <Col className="text-center text-uppercase text-white">
+              <h4>We're Mobile!</h4>
+            </Col>
+          </Row>
+          <Row>
+            <Col></Col>
           </Row>
         </motion.div>
       </motion.div>
