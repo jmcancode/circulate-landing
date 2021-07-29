@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Image, Form, Offcanvas, Button } from "react-bootstrap";
+import { Row, Col, Form, Offcanvas, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
 import { db } from "../firebase/config";
