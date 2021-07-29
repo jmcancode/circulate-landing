@@ -62,13 +62,16 @@ export default function LandingPage() {
               }}
               className="pt-3"
             >
-              <Image
+              <motion.img
                 fluid
                 src={logo}
                 alt="logo"
                 height={100}
                 width={100}
                 style={{ width: "150px", height: "150px" }}
+                animate={{
+                  rotate: 360
+                }}
               />
             </Col>
           </Row>
