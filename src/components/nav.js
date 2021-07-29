@@ -2,19 +2,23 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { AiFillApple, AiFillAndroid, AiOutlineMail } from "react-icons/ai";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export default function FooterNav() {
   return (
     <>
       <Navbar fixed="bottom">
         <Container>
-          <Nav
+          <motion.div
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               alignItems: "center",
             }}
+            className="nav"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
           >
             <div
               style={{
@@ -38,8 +42,12 @@ export default function FooterNav() {
                 <AiFillAndroid color="#f5f5f5" size={40} />
               </Nav.Item>
             </div>
-          </Nav>
-          <Nav className="ml-auto">
+          </motion.div>
+          <motion.div
+            className="nav ml-auto"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
             <div
               style={{
                 display: "flex",
@@ -72,7 +80,7 @@ export default function FooterNav() {
                 </a>
               </Nav.Item>
             </div>
-          </Nav>
+          </motion.div>
         </Container>
       </Navbar>
     </>
