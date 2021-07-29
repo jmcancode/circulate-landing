@@ -21,7 +21,9 @@ export default function LandingPage() {
         email: email,
       })
       .then(() => {
-        alert("Thank you for joining!");
+        alert(
+          "Thank you for joining the Circulate community! We look forward to updating you on the launch of our new web application"
+        );
       })
       .catch((err) => {
         alert(err.message);
@@ -70,7 +72,8 @@ export default function LandingPage() {
                 width={100}
                 style={{ width: "150px", height: "150px" }}
                 animate={{
-                  rotate: 360
+                  rotate: 360,
+                  duration: 5,
                 }}
               />
             </Col>
