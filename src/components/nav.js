@@ -39,7 +39,15 @@ export default function FooterNav() {
                 </a>
               </Nav.Item>
               <Nav.Item className="p-2">
-                <AiFillAndroid color="#f5f5f5" size={40} />
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.devex.circulateapp"
+                  target="__blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  {" "}
+                  <AiFillAndroid color="#f5f5f5" size={40} />{" "}
+                </a>
               </Nav.Item>
             </div>
           </motion.div>
