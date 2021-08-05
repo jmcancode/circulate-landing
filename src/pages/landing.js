@@ -6,11 +6,15 @@ import { db } from "../firebase/config";
 import "../index.css";
 export default function LandingPage() {
   const [showContact, setShowContact] = useState(false);
+  const [showPress, setShowPress] = useState(false);
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
 
   const handleContactClose = () => setShowContact(false);
   const handleContactShow = () => setShowContact(true);
+
+  const handlePressClose = () => setShowPress(false);
+  const handlePressShow = () => setShowPress(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -100,7 +104,47 @@ export default function LandingPage() {
               </small>
             </Col>
           </Row>
-          <Row>
+          <Row xs={1}>
+            <Col className="text-center pt-3">
+              <Button
+                variant="outline-light"
+                style={{ fontFamily: "Roboto", fontWeight: "500" }}
+                className="ml-3"
+                onClick={handlePressShow}
+              >
+                PRESS
+              </Button>
+              <Offcanvas
+                placement="top"
+                show={showPress}
+                onHide={handlePressClose}
+              >
+                <Offcanvas.Header
+                  closeButton
+                  style={{ backgroundColor: "#f5f5f5" }}
+                >
+                  <Offcanvas.Title
+                    style={{ fontFamily: "Roboto", fontWeight: "500" }}
+                  >
+                    Press in San Antonio
+                  </Offcanvas.Title>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                  <Row xs={1} md={1} lg={1}>
+                    <Col className="pb-2">
+                      <a
+                        href="https://spectrumlocalnews.com/tx/san-antonio/news/2021/07/31/phone-app-helps-black-owned-businesses-"
+                        rel="noopener"
+                        target="__blank"
+                        style={{ textDecoration: "none", color: "#275044" }}
+                      >
+                        <p>Spectrum News: Austin</p>
+                      </a>
+                    </Col>
+                  </Row>
+                </Offcanvas.Body>
+              </Offcanvas>
+            </Col>
             <Col className="text-center pt-3">
               <Button
                 variant="outline-light"
