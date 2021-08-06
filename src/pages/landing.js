@@ -79,8 +79,8 @@ export default function LandingPage() {
                 style={{ width: "150px", height: "150px" }}
                 animate={{
                   rotate: 360,
-                  duration: 5,
                 }}
+                transition={{ duration: 2 }}
               />
             </Col>
           </Row>
