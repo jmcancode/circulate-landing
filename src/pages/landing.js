@@ -92,7 +92,10 @@ export default function LandingPage() {
               >
                 Our website is{" "}
               </small>
-              <h1 style={{ fontFamily: "Roboto" }} className="text-uppercase neon-text">
+              <h1
+                style={{ fontFamily: "Roboto" }}
+                className="text-uppercase neonText"
+              >
                 under construction
               </h1>
               <small
