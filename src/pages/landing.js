@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
 import { db } from "../firebase/config";
 import "../index.css";
+import "./main.css";
+
 export default function LandingPage() {
   const [showContact, setShowContact] = useState(false);
   const [showPress, setShowPress] = useState(false);
@@ -90,7 +92,7 @@ export default function LandingPage() {
               >
                 Our website is{" "}
               </small>
-              <h1 style={{ fontFamily: "Roboto" }} className="text-uppercase">
+              <h1 style={{ fontFamily: "Roboto" }} className="text-uppercase neon-text">
                 under construction
               </h1>
               <small
