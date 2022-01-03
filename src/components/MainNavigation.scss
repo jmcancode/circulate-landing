@@ -1,0 +1,34 @@
+.main-navigation {
+    background-color: transparent !important;
+    top: 0;
+    width: 100%;
+    // z-index: 999;
+    height: 100px !important;
+}
+.main-navigation.active {
+    background-color: rgb(255,255,255, 0.96) !important;
+    width: 100%;
+    height: 100px;
+    z-index: 999;
+    box-shadow: 0 8px 6px -6px #fff;
+    top: 0;
+}
+
+.main-navigation a:active,
+.main-navigation a:hover {
+    background: #fff !important;
+    color: #171717 !important;
+}
+
+
+.main-navigation a {
+    text-decoration: none;
+    color: #fff !important;
+    border-radius: 5px;
+}
+
+.main-navigation.active a {
+    text-decoration: none;
+    color: #171717 !important;
+    border-radius: 5px;
+}

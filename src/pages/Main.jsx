@@ -1,4 +1,7 @@
-import React, {Fragment} from 'react'
+import React, {Fragment, useState} from 'react'
+// react-bootstrap ui
+import {Tab, TabContainer, Tabs} from 'react-bootstrap'
+// react-icons
 import {AiOutlineArrowDown} from 'react-icons/ai'
 //components
 import MainNavi from "../components/MainNavi"
@@ -7,6 +10,9 @@ import FooterNav from "../components/nav"
 import "./Main.scss"
 
 function MainPage() {
+
+    const [key,
+        setKey] = useState('listing')
     return (
         <Fragment>
             <MainNavi/>
@@ -22,7 +28,9 @@ function MainPage() {
                         <small className="notify-me-text">Notify me when the app launches</small>
                         <div className="scroll-content">
                             <small className="scroll-text">
-                                <AiOutlineArrowDown size={44} color="white"/>
+                                <a href="#about">
+                                    <AiOutlineArrowDown size={44} color="white"/>
+                                </a>
                             </small>
                         </div>
                     </div>
@@ -46,7 +54,7 @@ function MainPage() {
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a className="our-services-btn-left" href="#press">Press</a>
+                                <a className="our-services-btn-left" href="#press">Learn More</a>
                                 <a className="our-services-btn-right" href="#services">Services</a>
                             </p>
                         </div>
@@ -61,11 +69,41 @@ function MainPage() {
                 </section>
                 <section id="press" className="press-container">
                     <div className="press-content">
-                        press
+                        <div className="pressNmedia">
+                            <p>Press& Media</p>
+
+                        </div>
+                        <div id="#companyInfo" className="press-company-info-container">
+                            <p className="press-company-info">Company Info</p>
+                        </div>
+                        <div id="#pressRelease" className="press-release-container">
+                            <p className="press-release">Press Release</p>
+                        </div>
+                        <div id="#brandAssests" className="press-company-brand-assets-container">
+                            <p className="press-brand-assets">Brand Assets</p>
+                        </div>
+                        <div className="press-down-button">
+                            <a href="#services" className="press-what-we-offer">
+                                <AiOutlineArrowDown size={40} color="white"/>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section id="services" className="services-container">
-                    <div className="services-content">services</div>
+                    <div className="services-content">
+                        <div className="services-our-services-text">
+                            <p>Our Services</p>
+                        </div>
+                        <div className="services-listing">
+                           <p>Listings</p>
+                        </div>
+                        <div className="services-events">
+                           <p>Events</p>
+                        </div>
+                        <div className="services-newsletters">
+                           <p>Newsletters</p>
+                        </div>
+                    </div>
                 </section>
             </div>
             <FooterNav/>
