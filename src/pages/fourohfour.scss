@@ -1,0 +1,28 @@
+.error-wrapper {
+    display: flex;
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    p {
+        text-align: center;
+    }
+
+    a {
+        color: green;    
+        text-decoration: none;
+    }
+}
+
+.error-inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.error-goback {
+    font-size: 2em;
+    font-family: Roboto, "Helvetica Neue";
+    font-weight: 700;
+}

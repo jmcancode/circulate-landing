@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import logo from "../assets/circulate.png";
 import { db } from "../firebase/config";
 import "../index.css";
-import "./main.css";
+import "./landing.scss";
 
 export default function LandingPage() {
   const [showContact, setShowContact] = useState(false);
@@ -42,6 +42,7 @@ export default function LandingPage() {
   return (
     <React.Fragment>
       <motion.div
+        id="section-one"
         style={{
           height: "100vh",
           width: "100%",
@@ -61,42 +62,14 @@ export default function LandingPage() {
           }}
         >
           <Row>
-            <Col
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              className="pt-3"
-            >
-              <motion.img
-                fluid
-                src={logo}
-                alt="logo"
-                height={100}
-                width={100}
-                style={{ width: "150px", height: "150px" }}
-                animate={{
-                  rotate: 360,
-                }}
-                transition={{ duration: 2 }}
-              />
-            </Col>
           </Row>
           <Row xs={1} md={1} lg={1}>
             <Col className="text-center text-white pt-4">
-              <small
-                style={{ fontFamily: "Roboto" }}
-                className="text-uppercase"
-              >
-                Our website is{" "}
-              </small>
               <h1
                 style={{ fontFamily: "Roboto" }}
                 className="text-uppercase neonText"
               >
-                under construction
+                It'll be ready when it's ready...
               </h1>
               <small
                 style={{
@@ -105,11 +78,12 @@ export default function LandingPage() {
                   textTransform: "uppercase",
                 }}
               >
-                Join our mailing list for the official launch.
+                Notify me when the Circulate Web App is launched.
               </small>
             </Col>
           </Row>
           <Row xs={1}>
+          {/* Press  section */}
             <Col className="text-center pt-3">
               <Button
                 variant="outline-light"
@@ -150,6 +124,7 @@ export default function LandingPage() {
                 </Offcanvas.Body>
               </Offcanvas>
             </Col>
+            {/* Sign Up section */}
             <Col className="text-center pt-3">
               <Button
                 variant="outline-light"

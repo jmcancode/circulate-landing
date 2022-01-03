@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { AiFillApple, AiFillAndroid, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { FiFacebook, FiInstagram } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -28,27 +28,6 @@ export default function FooterNav() {
                 alignItems: "center",
               }}
             >
-              <Nav.Item>
-                <a
-                  href="https://apps.apple.com/us/app/circulate-llc/id1570958132"
-                  target="__blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  <AiFillApple color="#f5f5f5" size={40} />
-                </a>
-              </Nav.Item>
-              <Nav.Item className="p-2">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.devex.circulateapp"
-                  target="__blank"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  {" "}
-                  <AiFillAndroid color="#f5f5f5" size={40} />{" "}
-                </a>
-              </Nav.Item>
             </div>
           </motion.div>
           <motion.div

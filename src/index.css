@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 
 html, body {
   background-color: #171717;
@@ -9,6 +12,7 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 code {
