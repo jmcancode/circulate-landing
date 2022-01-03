@@ -1,28 +1,70 @@
 .error-wrapper {
     display: flex;
-    background-color: transparent;
-    height: 100vh;
+    background-color: #171717;
+    border-color: transparent;
+    height: 80vh;
     width: 100vw;
     p {
         text-align: center;
     }
 
     a {
-        color: green;    
+        color: green;
         text-decoration: none;
+    }
+    a:hover {
+        color: #fff;
     }
 }
 
-.error-inner-container{
+.error-inner-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
+    border-color: transparent;
+    
 }
 
 .error-goback {
-    font-size: 2em;
+    font-size: 1.9em;
     font-family: Roboto, "Helvetica Neue";
-    font-weight: 700;
+    font-weight: 400;
+}
+
+.error-four-oh-four {
+    font-size: 4em;
+    color: #f5f5f5;
+    font-weight: 900;
+    @media only screen and (max-width: 375px) {
+        font-size: 2em;
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 3.2em;
+    }
+}
+
+.error-small-text {
+    font-size: 0.9em;
+    color: grey;
+}
+
+// connected accounts
+.connect-wrapper {
+    height: 20vh;
+    background-color: #171717;
+    border-color: transparent;
+}
+
+
+.connect-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-right: 25px;
+    height: 20vh;
+    background-color: transparent;
+    border-color: transparent;
 }

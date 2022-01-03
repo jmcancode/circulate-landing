@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function FooterNav() {
   return (
     <>
-      <Navbar fixed="bottom">
+      <Navbar style={{height: '40vh'}}>
         <Container>
           <motion.div
             style={{
@@ -39,7 +39,7 @@ export default function FooterNav() {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "center",
+                justifyContent: "space-around",
                 alignItems: "center",
               }}
             >
@@ -49,7 +49,7 @@ export default function FooterNav() {
                   target="__blank"
                   rel="noopener noreferrer"
                 >
-                  <FiFacebook color="#f5f5f5" size={35} />
+                  <FiFacebook color="#171717" size={25} />
                 </a>
               </Nav.Item>
               <Nav.Item className="p-2">
@@ -58,12 +58,12 @@ export default function FooterNav() {
                   target="__blank"
                   rel="noopener noreferrer"
                 >
-                  <FiInstagram color="#f5f5f5" size={35} />
+                  <FiInstagram color="#171717" size={25} />
                 </a>
               </Nav.Item>
               <Nav.Item className="p-2">
                 <a href="mailto:circulatetheapp@gmail.com?subject=Circulate Inquiry">
-                  <AiOutlineMail color="#f5f5f5" size={35} />
+                  <AiOutlineMail color="#171717" size={25} />
                 </a>
               </Nav.Item>
             </div>
