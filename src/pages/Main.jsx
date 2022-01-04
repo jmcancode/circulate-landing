@@ -1,6 +1,4 @@
 import React, {Fragment, useState} from 'react'
-// react-bootstrap ui
-import {Tab, TabContainer, Tabs} from 'react-bootstrap'
 // react-icons
 import {AiOutlineArrowDown} from 'react-icons/ai'
 //components
@@ -10,6 +8,7 @@ import FooterNav from "../components/nav"
 import "./Main.scss"
 // firebase
 import {db} from "../firebase/config"
+import {Link} from 'react-router-dom'
 
 function MainPage() {
     const [fullName,
@@ -70,19 +69,20 @@ function MainPage() {
                                 required="true"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}/>
-                            
-                                <button className="btn btn-secondary mt-3" type="submit" variant="secondary">submit</button>
-                            
+
+                            <button className="btn btn-secondary mt-3" type="submit" variant="secondary">submit</button>
+
                             <small className="notify-me-text">Notify me when the app launches</small>
                         </form>
-                        <div className="scroll-content">
-                            <small className="scroll-text">
-                                <a href="#about">
+                        <div className="scroll-content ">
+                            <small>
+                                <a href="#about" className="bounce-5">
                                     <AiOutlineArrowDown size={54} color="white"/>
                                 </a>
                             </small>
                         </div>
                     </div>
+
                 </section>
                 <section id="about" className="about-container">
                     <div className="about-content">
@@ -99,13 +99,11 @@ function MainPage() {
                                 Our mission is to give growing minority business owners a platform that can help
                                 expand their virtual presence and connect San Antonians to great local
                                 businesses.
-                                <br/>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <a className="our-services-btn-left" href="#press">Learn More</a>
-                                <a className="our-services-btn-right" href="#services">Services</a>
                             </p>
+                            <div className='our-service-btn-container'>
+                                <a className="our-services-btn-left" href="#press">Brand</a>
+                                <a className="our-services-btn-right" href="#services">Services</a>
+                            </div>
                         </div>
                         <div className="about-image-container">
                             <img
@@ -119,17 +117,22 @@ function MainPage() {
                 <section id="press" className="press-container">
                     <div className="press-content">
                         <div className="pressNmedia">
-                            <p>Press& Media</p>
-
+                            <p className="press-media-text">Press&Media</p>
                         </div>
                         <div id="#companyInfo" className="press-company-info-container">
-                            <p className="press-company-info">Company Info</p>
+                            <p className="press-company-info">
+                                <a href="GP_Pitch.pdf" download>
+                                    Company Info
+                                </a>
+                            </p>
                         </div>
                         <div id="#pressRelease" className="press-release-container">
                             <p className="press-release">Press Release</p>
                         </div>
                         <div id="#brandAssests" className="press-company-brand-assets-container">
-                            <p className="press-brand-assets">Brand Assets</p>
+                            <p className="press-brand-assets">
+                                <a href="brandassets.pdf" download>Brand Assets</a>
+                                </p>
                         </div>
                         <div className="press-down-button">
                             <a href="#services" className="press-what-we-offer">
