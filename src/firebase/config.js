@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
-
+// db
 import "firebase/firestore";
-import 'firebase/messaging'
+
 
 const app = firebase.initializeApp({
     apiKey: process.env.REACT_APP_API_KEY,
@@ -12,33 +12,6 @@ const app = firebase.initializeApp({
     appId: process.env.REACT_APP_APP_ID,
     measurementId: process.env.REACT_APP_MEASUREMENT_ID
 });
-
-const messaging = firebase.messaging();
-const {REACT_APP_VAPID_KEY} = process.env
-const publicKey = REACT_APP_VAPID_KEY;
-
-export const getToken = async(setTokenFound) => {
-    let currentToken = '';
-
-    try {
-        currentToken = await messaging.getToken({vapidKey: publicKey});
-        if (currentToken) {
-            setTokenFound(true);
-        } else {
-            setTokenFound(false)
-        }
-    } catch (err) {
-        console.warn("An error occurred while retrieving token.", err);
-    }
-
-    return currentToken;
-}
-
-export const onMessageListener = () => new Promise((resolve) => {
-    messaging.onMessage((payload) => {
-        resolve(payload);
-    })
-})
 
 export const db = app.firestore();
 

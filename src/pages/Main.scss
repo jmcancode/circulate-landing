@@ -167,34 +167,6 @@ section {
 
 }
 
-.bounce-5 {
-    animation-name: bounce-5;
-    animation-timing-function: ease;
-}
-@keyframes bounce-5 {
-    0% {
-        transform: scale(1,1) translateY(0);
-    }
-    10% {
-        transform: scale(1.1,.9) translateY(0);
-    }
-    30% {
-        transform: scale(.9,1.1) translateY(-100px);
-    }
-    50% {
-        transform: scale(1,1) translateY(0);
-    }
-    57% {
-        transform: scale(1,1) translateY(-7px);
-    }
-    64% {
-        transform: scale(1,1) translateY(0);
-    }
-    100% {
-        transform: scale(1,1) translateY(0);
-    }
-}
-
 .scroll-text {
     background-color: #fff;
     width: 250px;
@@ -210,7 +182,7 @@ section {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(5);
-    background-color: #d6d6d0;
+    background-color: #393a3b;
 }
 .pressNmedia {
     grid-column: 1/12;
@@ -303,7 +275,7 @@ section {
     }
     a:hover {
 
-        color: #fff;
+        color: #171717;
     }
     @media only screen and (max-width: 375px) {
         color: #fff;
@@ -394,7 +366,7 @@ section {
         color: #fff;
     }
     a:hover {
-        color: #fff;
+        color: #171717;
     }
     @media only screen and (max-width: 375px) {
         color: #fff;
@@ -476,7 +448,7 @@ section {
 .services-listing {
     grid-column: 7/12;
     grid-row: 2/5;
-    background-color: rgb(255,255,255, 0.1);
+    background-color: #393a3b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -505,7 +477,7 @@ section {
     justify-content: center;
     cursor: pointer;
     align-items: center;
-    background-color: rgb(255,255,255, 0.1);
+    background-color: #393a3b;
 
     p {
         font-size: 1.5em;
@@ -529,7 +501,7 @@ section {
     justify-content: center;
     cursor: pointer;
     align-items: center;
-    background-color: rgb(255,255,255, 0.1);
+    background-color: #393a3b;
 
     p {
         font-size: 1.5em;
