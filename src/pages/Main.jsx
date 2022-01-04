@@ -8,7 +8,8 @@ import FooterNav from "../components/nav"
 import "./Main.scss"
 // firebase
 import {db} from "../firebase/config"
-import {Link} from 'react-router-dom'
+
+
 
 function MainPage() {
     const [fullName,
@@ -60,13 +61,13 @@ function MainPage() {
                                 placeholder='full name'
                                 aria-label="Email"
                                 type="name"
-                                required="true"
+                                required
                                 className="mb-2"/>
                             <input
                                 placeholder='email@address.com'
                                 aria-label="Email"
                                 type="email"
-                                required="true"
+                                required
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}/>
 
