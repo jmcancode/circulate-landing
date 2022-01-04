@@ -8,11 +8,33 @@ import MainNavi from "../components/MainNavi"
 import FooterNav from "../components/nav"
 // custom styles
 import "./Main.scss"
+// firebase
+import {db} from "../firebase/config"
 
 function MainPage() {
+    const [fullName,
+        setFullName] = useState("");
+    const [email,
+        setEmail] = useState("");
 
-    const [key,
-        setKey] = useState('listing')
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        db
+            .collection("subscribers")
+            .add({fullName: fullName, email: email})
+            .then(() => {
+                alert("Thank you for joining the Circulate community! We look forward to updating you o" +
+                        "n the launch of our new web application");
+            })
+            .catch((err) => {
+                alert(err.message);
+            });
+
+        setFullName("");
+        setEmail("");
+    };
+
     return (
         <Fragment>
             <MainNavi/>
@@ -20,16 +42,43 @@ function MainPage() {
                 <section id="hero" className="hero-container">
                     <div className="hero-content">
 
-                        <p className="text-muted connecting-text">
+                        <p className="text-white connecting-text">
                             Connecting the greater San Antonio area with minority owned businesses.
                         </p>
                         <p className="coming-soon-text">Coming Soon!</p>
-                        <input placeholder='email@address.com' aria-label="Email" type="email"/>
-                        <small className="notify-me-text">Notify me when the app launches</small>
+                        <form
+                            onSubmit={handleSubmit}
+                            style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: "100%"
+                        }}>
+                            <input
+                                value={fullName}
+                                onChange={(e) => setFullName(e.target.value)}
+                                placeholder='full name'
+                                aria-label="Email"
+                                type="name"
+                                required="true"
+                                className="mb-2"/>
+                            <input
+                                placeholder='email@address.com'
+                                aria-label="Email"
+                                type="email"
+                                required="true"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}/>
+                            
+                                <button className="btn btn-secondary mt-3" type="submit" variant="secondary">submit</button>
+                            
+                            <small className="notify-me-text">Notify me when the app launches</small>
+                        </form>
                         <div className="scroll-content">
                             <small className="scroll-text">
                                 <a href="#about">
-                                    <AiOutlineArrowDown size={44} color="white"/>
+                                    <AiOutlineArrowDown size={54} color="white"/>
                                 </a>
                             </small>
                         </div>
@@ -95,13 +144,13 @@ function MainPage() {
                             <p>Our Services</p>
                         </div>
                         <div className="services-listing">
-                           <p>Listings</p>
+                            <p>Listings</p>
                         </div>
                         <div className="services-events">
-                           <p>Events</p>
+                            <p>Events</p>
                         </div>
                         <div className="services-newsletters">
-                           <p>Newsletters</p>
+                            <p>Newsletters</p>
                         </div>
                     </div>
                 </section>
