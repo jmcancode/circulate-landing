@@ -145,16 +145,16 @@ function MainPage() {
                 <section id="services" className="services-container">
                     <div className="services-content">
                         <div className="services-our-services-text">
-                            <p>Our Services</p>
+                            <p href="#hero">Our Services</p>
                         </div>
                         <div className="services-listing">
-                            <p>Listings</p>
+                            <a href="#hero">Listings</a>
                         </div>
                         <div className="services-events">
-                            <p>Events</p>
+                            <a href="#hero">Events</a>
                         </div>
                         <div className="services-newsletters">
-                            <p>Newsletters</p>
+                            <a href="#hero">Newsletters</a>
                         </div>
                     </div>
                 </section>

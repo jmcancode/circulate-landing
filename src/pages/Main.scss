@@ -88,7 +88,7 @@ section {
     align-items: center;
     background-color: #171717;
     width: 100%;
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 390px) {
         flex-direction: column;
     }
     @media only screen and (max-width: 768px) {}
@@ -98,10 +98,10 @@ section {
     padding: 20px;
     background-color: #fff;
     border-radius: 15px;
-    width: 50%;
+    width: 40%;
     box-shadow: 10px 15px 82px 0 rgba(255,255,255,0.8);
     transition: 0.5s;
-    @media only screen and (max-width: 375px) {
+    @media only screen and (max-width: 390px) {
         width: 90%;
     }
 }
@@ -458,14 +458,20 @@ section {
         font-size: 1.5em;
         color: #fff;
     }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #171717;
+        text-decoration: line-through;
+        font-weight: bold;
+        font-weight: 2em;
+    }
 }
 .services-listing:hover {
-    background-color: #fff;
-
-    p {
-        font-size: 1.5em;
-        color: #171717;
-    }
+    background-color: #d6d6d7;
 }
 
 .services-events {
@@ -483,9 +489,18 @@ section {
         font-size: 1.5em;
         color: #fff;
     }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #171717;
+        font-weight: bold;
+        text-decoration: line-through;
+    }
 }
 .services-events:hover {
-    background-color: #fff;
+    background-color: #d6d6d7;
 
     p {
         font-size: 1.5em;
@@ -507,12 +522,16 @@ section {
         font-size: 1.5em;
         color: #fff;
     }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover{
+        text-decoration:line-through;
+        color: #171717;
+        font-weight: bold;
+    }
 }
 .services-newsletters:hover {
-    background-color: #fff;
-
-    p {
-        font-size: 1.5em;
-        color: #171717;
-    }
+    background-color: #d6d6d7;
 }
