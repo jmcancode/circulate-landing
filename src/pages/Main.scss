@@ -88,10 +88,12 @@ section {
     align-items: center;
     background-color: #171717;
     width: 100%;
-    @media only screen and (max-width: 390px) {
+    @media screen and (max-width: 390px) {
         flex-direction: column;
     }
-    @media only screen and (max-width: 768px) {}
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .about-text-wrapper {
@@ -101,13 +103,25 @@ section {
     width: 40%;
     box-shadow: 10px 15px 82px 0 rgba(255,255,255,0.8);
     transition: 0.5s;
-    @media only screen and (max-width: 390px) {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    @media screen and (min-width: 320px) and (max-width: 414px) {
         width: 90%;
+        height: 50%;
+    }
+    @media screen and (max-width: 768px){
+        width: 90%;
+        overflow: scroll;
     }
 }
 
 .about-text {
     line-height: 21.4px;
+    height: 48%;
 }
 
 .our-service-btn-container {
@@ -124,7 +138,7 @@ section {
     padding: 20px;
     border-radius: 15px;
     text-decoration: none;
-    @media only screen and (max-width: 390px) {
+    @media screen and (min-width: 390px) {
         font-size: 1em;
         padding: 10px;
     }

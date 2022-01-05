@@ -28,7 +28,7 @@ function MainNavi() {
             collapseOnSelect
             expand="lg"
             variant="dark">
-            <Container>
+            <Container style={{width: '100%'}}>
                 <Navbar.Brand
                     href="#hero"
                     className="text-uppercase"
