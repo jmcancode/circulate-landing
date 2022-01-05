@@ -11,7 +11,7 @@
     "bootstrap": "5.0.2",
     "firebase": "^8.8.0",
     "framer-motion": "^4.1.17",
-    "netlify-cli": "^8.6.4",
+    "netlify-cli": "^8.6.5",
     "prop-types": "^15.8.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0-beta.4",

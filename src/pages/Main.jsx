@@ -38,12 +38,12 @@ function MainPage() {
     return (
         <Fragment>
             <MainNavi/>
-            <div id="main-wrapper">
+            <div id="main-wrapper" className="main-wrapper">
                 <section id="hero" className="hero-container">
                     <div className="hero-content">
 
                         <p className="text-white connecting-text">
-                            Connecting the greater San Antonio area with minority owned businesses.
+                            Connecting the greater San Antonio area with black & minority owned businesses.
                         </p>
                         <p className="coming-soon-text">Coming Soon!</p>
                         <form

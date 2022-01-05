@@ -1,6 +1,4 @@
-.main-wrapper {
-    display: block;
-}
+
 
 section {
     height: 100%;
@@ -65,7 +63,7 @@ section {
     }
 }
 .connecting-text {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 .notify-me-text {
     font-size: 12px;
@@ -97,7 +95,7 @@ section {
 }
 
 .about-text-wrapper {
-    padding: 20px;
+    padding: 50px;
     background-color: #fff;
     border-radius: 15px;
     width: 40%;
@@ -109,9 +107,9 @@ section {
     justify-content: center;
     align-items: center;
   
-    @media screen and (min-width: 320px) and (max-width: 414px) {
+    @media screen and (min-width: 375px) and (max-width: 414px) {
         width: 90%;
-        height: 50%;
+        height: auto;
     }
     @media screen and (max-width: 768px){
         width: 90%;
@@ -121,7 +119,7 @@ section {
 
 .about-text {
     line-height: 21.4px;
-    height: 48%;
+    
 }
 
 .our-service-btn-container {
@@ -148,12 +146,11 @@ section {
     color: #171717;
     background-color: #fff;
     padding: 20px;
-    border-width: 5px;
     border-color: #171717;
     border-radius: 15px;
     text-decoration: none;
     margin-left: 5px;
-    @media only screen and (max-width: 390px) {
+    @media screen and (min-width: 375px) and (max-width: 390px) {
         font-size: 1em;
         padding: 10px;
     }
