@@ -1,11 +1,16 @@
 .footer-container {
     height: 20vh;
+    max-height: 100%;
     width: 100%;
     background-image: url('../assets/footer.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: flex-center;
     cursor: pointer;
+
+    @media screen and (max-width: 390px){
+        height: 35vh;
+    }
 }
 
 .footer-wrapper {
