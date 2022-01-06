@@ -8,8 +8,7 @@ import FooterNav from "../components/nav"
 import "./Main.scss"
 // firebase
 import {db} from "../firebase/config"
-
-
+import {Button} from 'react-bootstrap'
 
 function MainPage() {
     const [fullName,
@@ -86,7 +85,11 @@ function MainPage() {
 
                 </section>
                 <section id="about" className="about-container">
-                    <div className="about-content">
+                    <div
+                        className="about-content"
+                        style={{
+                        backgroundColor: "linearGradient(#777, #171717)"
+                    }}>
                         <div className="about-text-wrapper">
                             <p className="about-text">
                                 Circulate, LLC was born from a need to find and support local minority owned
@@ -133,7 +136,7 @@ function MainPage() {
                         <div id="#brandAssests" className="press-company-brand-assets-container">
                             <p className="press-brand-assets">
                                 <a href="brandassets.pdf" download>Brand Assets</a>
-                                </p>
+                            </p>
                         </div>
                         <div className="press-down-button">
                             <a href="#services" className="press-what-we-offer">
@@ -146,15 +149,10 @@ function MainPage() {
                     <div className="services-content">
                         <div className="services-our-services-text">
                             <p href="#hero">Our Services</p>
+                            <small className="text-white comming-soon">Launching 2022</small>
                         </div>
-                        <div className="services-listing">
-                            <a href="#hero">Listings</a>
-                        </div>
-                        <div className="services-events">
-                            <a href="#hero">Events</a>
-                        </div>
-                        <div className="services-newsletters">
-                            <a href="#hero">Newsletters</a>
+                        <div style={{paddingTop: '4em'}}>
+                            <Button style={{padding: '15px'}} small className="rounded-pill" variant="dark" href="#hero">Subscribe for updates</Button>
                         </div>
                     </div>
                 </section>

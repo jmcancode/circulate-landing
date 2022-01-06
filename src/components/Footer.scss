@@ -1,5 +1,5 @@
 .footer-container {
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     background-image: url('../assets/footer.jpg');
     background-repeat: no-repeat;
@@ -41,9 +41,9 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 1.9em;
+    font-size: 1.5em;
     font-weight: 500;
-
+padding-top: 1em;
     @media only screen and (max-width: 390px) {
     font-size: 1.3em;
     }

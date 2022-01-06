@@ -11,6 +11,7 @@ function App() {
     return (
         <Router>
             <div className="App">
+             
                 <Routes>
                     <Route exact path="/" element={< MainPage />}/>
                     <Route path="*" element={< ErrorPage />}/>
