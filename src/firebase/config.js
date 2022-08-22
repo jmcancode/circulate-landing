@@ -1,4 +1,6 @@
 import firebase from "firebase/app";
+import { getPerformance } from "firebase/performance";
+
 // db
 import "firebase/firestore";
 
@@ -12,6 +14,8 @@ const app = firebase.initializeApp({
     appId: process.env.REACT_APP_APP_ID,
     measurementId: process.env.REACT_APP_MEASUREMENT_ID
 });
+
+const perf = getPerformance(app);
 
 export const db = app.firestore();
 
